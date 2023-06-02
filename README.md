@@ -3,6 +3,8 @@
 
 Merhaba, bu git reposunda Patika üzerinden almakta olduğum [SQL](https://academy.patika.dev/courses/sql) kursunun ödevleri yer almaktadır.
 
+* Çalışmalar **[dvdrental](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database)** adlı örnek veri tabanı üzerinden gerçekleştirilmiştir.
+
 ## Ödev 1
 Aşağıdaki sorgu senaryolarını  **dvdrental**  örnek veri tabanı üzerinden gerçekleştiriniz.
 
