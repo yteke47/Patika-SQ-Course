@@ -5,7 +5,6 @@ Merhaba, bu git reposunda Patika üzerinden almakta olduğum [SQL](https://acade
 * Çalışmalar **[dvdrental](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database)** adlı örnek veri tabanı üzerinden gerçekleştirilmiştir.
 
 ## Ödev 1
-
 1.  **film**  tablosunda bulunan  **title**  ve  **description**  sütunlarındaki verileri sıralayınız.
 ``` SQL
 SELECT title, description FROM film;
@@ -50,9 +49,7 @@ WHERE first_name IN('Penelope', 'Nick', 'Ed')
 SELECT * FROM film
 WHERE (rental_rate IN(0.99, 2.99, 4.99)) AND (replacement_cost IN(12.99, 15.99, 28.99))
 ```
-
 ## Ödev 3
-
 1.  **country**  tablosunda bulunan  **country**  sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
 ``` SQL
 SELECT * FROM country
@@ -72,4 +69,30 @@ WHERE title ILIKE '%T%T%T%T%'
 ``` SQL
 SELECT * FROM film
 WHERE (title LIKE 'C%') AND (length > 90) AND (rental_rate = 2.99)
+```
+
+## Ödev 4
+
+1.  **film**  tablosunda bulunan  **replacement_cost**  sütununda bulunan birbirinden farklı değerleri sıralayınız.
+``` SQL
+SELECT DISTINCT replacement_cost FROM film
+```
+2.  **film**  tablosunda bulunan  **replacement_cost**  sütununda birbirinden farklı kaç tane veri vardır?
+``` SQL
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+```
+3.  **film**  tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+``` SQL
+SELECT COUNT(*) FROM film
+WHERE title LIKE 'T%' AND rating = 'G';
+```
+4.  **country**  tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+``` SQL
+SELECT COUNT(*) FROM country
+WHERE country LIKE '_____'
+```
+5.  **city**  tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+``` SQL
+SELECT COUNT(*) FROM city
+WHERE city ILIKE '%r'
 ```
